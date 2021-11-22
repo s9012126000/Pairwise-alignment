@@ -111,81 +111,10 @@ class alignment(object):
                'score = ' + str(int(value))
 
 
-if __name__ == '__main__':
-    seq1 = sequence("TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC")
-    seq2 = sequence("AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC")
-    score = score(1,-1,-1)
-    align = alignment(seq1,seq2,score)
-    result = align.startAlign()
-    print(result)
-
-
-
-
-
-
-# def score_Matrix(ref,seq,match,mismatch):
-#     score_arr = np.zeros((len(ref),len(seq)))
-#     for i in range(len(ref)):
-#         for j in range(len(seq)):
-#             if ref[i] == seq[j]:
-#                 score_arr[i, j] = match
-#             else:
-#                 score_arr[i, j] = mismatch
-#     return score_arr
-
-# def Matrix(score_arr,ref,seq,gap):
-#     main_arr = np.zeros((len(ref)+1, len(seq)+1))
-#     main_arr01 = gapPanalty(ref,seq,main_arr,gap)
-#     for i in range(1,len(ref)+1):
-#         for j in range(1,len(seq)+1):
-#             main_arr01[i][j]= max(main_arr01[i-1][j-1]+score_arr[i-1][j-1],
-#                                 main_arr01[i-1][j]+gap,
-#                                 main_arr01[i][j-1]+gap
-#                                 )
-#     return main_arr01
-
-# def traceback(ref,seq,main_arr,score_arr,gap):
-#     alignment1 = ''
-#     alignment2 = ''
-#     refLenth = len(ref)
-#     seqLenth = len(seq)
-#     value = 0
-#     while refLenth >0 or seqLenth>0:
-#
-#         if refLenth>0 and seqLenth>0 and main_arr[refLenth][seqLenth] == main_arr[refLenth-1][seqLenth-1]+score_arr[refLenth-1][seqLenth-1]:
-#             alignment1 = ref[refLenth-1]+alignment1
-#             alignment2 = seq[seqLenth-1]+alignment2
-#             value += main_arr[refLenth][seqLenth]
-#             refLenth -= 1
-#             seqLenth -= 1
-#
-#         elif refLenth>0 and main_arr[refLenth][seqLenth] == main_arr[refLenth-1][seqLenth]+ gap:
-#             alignment1 = ref[refLenth - 1] + alignment1
-#             alignment2 = '-'+ alignment2
-#             value += main_arr[refLenth][seqLenth]
-#             refLenth -= 1
-#
-#         else:
-#             alignment1 = '-'+ alignment1
-#             alignment2 = seq[seqLenth - 1] + alignment2
-#             value += main_arr[refLenth][seqLenth]
-#             seqLenth -= 1
-#
-#     return alignment1, alignment2, value
-
 # if __name__ == '__main__':
-#     ref = "ATCTGATG"
-#     seq = "TGCATAC"
-#     match = 1
-#     mismatch = -1
-#     gap = -1
-#     score_arr = score_Matrix(ref,seq,match,mismatch)
-#     print(score_arr)
-#     main_arr = Matrix(score_arr,ref,seq,gap)
-#     print(main_arr)
-#     align1,align2, value = traceback(ref,seq,main_arr,score_arr,gap)
-#     print('')
-#     print('align 1 =',align1)
-#     print('align 2 =',align2)
-#     print('score = '+ str(int(value)))
+#     seq1 = sequence("TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC")
+#     seq2 = sequence("AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC")
+#     score = score(1,-1,-1)
+#     align = alignment(seq1,seq2,score)
+#     result = align.startAlign()
+#     print(result)
