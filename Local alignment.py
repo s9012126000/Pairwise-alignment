@@ -77,28 +77,23 @@ def traceback(ref, seq, main_arr, score_arr, gap, score, loc):
 
     return alignment1, alignment2, value, (x+1,loc[0]), new_align1, new_align2,link
 
-if __name__ == '__main__':
-    ref = "TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC"
-    seq = "AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC"
-    match = 1
-    mismatch = -1
-    gap = -1
-    score_arr = score_Matrix(ref,seq,match,mismatch)
-    print(score_arr)
-    main_arr, best, loc = Matrix(score_arr,ref,seq,gap)
-    print(main_arr)
-    align1,align2, value, location,a1, a2, link = traceback(ref, seq, main_arr, score_arr, gap, best, loc)
-    print('')
-    print('align 1 =',align1)
-    print('align 2 =',align2)
-    print('score = '+ str(int(value)))
-    print(a1)
-    print(link)
-    print(a2)
-    print(location)
-
-
-
-    # seq1 = sequence("TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC")
-    # seq2 = sequence("AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC")
+# if __name__ == '__main__':
+#     ref = "TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC"
+#     seq = "AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC"
+#     match = 1
+#     mismatch = -1
+#     gap = -1
+#     score_arr = score_Matrix(ref,seq,match,mismatch)
+#     print(score_arr)
+#     main_arr, best, loc = Matrix(score_arr,ref,seq,gap)
+#     print(main_arr)
+#     align1,align2, value, location,a1, a2, link = traceback(ref, seq, main_arr, score_arr, gap, best, loc)
+#     print('')
+#     print('align 1 =',align1)
+#     print('align 2 =',align2)
+#     print('score = '+ str(int(value)))
+#     print(a1)
+#     print(link)
+#     print(a2)
+#     print(location)
 

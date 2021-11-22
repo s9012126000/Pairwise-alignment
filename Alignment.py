@@ -172,13 +172,13 @@ class Local(alignment):
                'SeqLoc: '+ str(self.loc2[0])+' -> '+ str(self.loc2[1])+ '\n' + \
                'score = ' + str(int(self.value))
 
-if __name__ == '__main__':
-    seq1 = sequence("TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC")
-    seq2 = sequence("AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC")
-    score = score(1,-1,-1)
-    Global_align = Global(seq1,seq2,score)
-    Global_result = Global_align.Global_start()
-    print(Global_result)
-    Local_align = Local(seq1,seq2,score)
-    Local_result = Local_align.Local_start()
-    print(Local_result)
+# if __name__ == '__main__':
+#     seq1 = sequence("TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC")
+#     seq2 = sequence("AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC")
+#     score = score(1,-1,-1)
+#     Global_align = Global(seq1,seq2,score)
+#     Global_result = Global_align.Global_start()
+#     print(Global_result)
+#     Local_align = Local(seq1,seq2,score)
+#     Local_result = Local_align.Local_start()
+#     print(Local_result)
