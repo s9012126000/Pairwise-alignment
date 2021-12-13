@@ -172,7 +172,6 @@ class Local(alignment):
                'SeqLoc: '+ str(self.loc2[0])+' -> '+ str(self.loc2[1])+ '\n' + \
                'score = ' + str(int(self.value))
 
-
 # if __name__ == '__main__':
 #     seq1 = sequence("TCCCAGTTATGTCAGGGGACACGAGCATGCAGAGAC")
 #     seq2 = sequence("AATTGCCGCCGTCGTTTTCAGCAGTTATGTCAGATC")
