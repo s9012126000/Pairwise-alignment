@@ -111,8 +111,8 @@ class Global(alignment):
 
     def traceback(self, main_arr, score_arr):
         '''
-            Search and save the optimised path traceback from main matrix
-            main_arr: main matrix
+        Search and save the optimised path traceback from main matrix
+        main_arr: main matrix
         Args:
             score_arr: score matrix
         return:
